@@ -4,7 +4,7 @@
   "description": "Head over to the [Introduction](https://timber.github.io/docs/v2/getting-started/introduction/) in Timber’s Getting Started section to learn more about how to use this.",
   "main": "index.js",
   "scripts": {
-    "start": "webpack"
+    "start": "webpack  --config webpack.config.js"
   },
   "keywords": [],
   "author": "",
