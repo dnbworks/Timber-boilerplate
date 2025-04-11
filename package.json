@@ -1,0 +1,16 @@
+{
+  "name": "learn-timber-theme",
+  "version": "1.0.0",
+  "description": "Head over to the [Introduction](https://timber.github.io/docs/v2/getting-started/introduction/) in Timber’s Getting Started section to learn more about how to use this.",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^5.99.5",
+    "webpack-cli": "^6.0.1"
+  }
+}

@@ -1,0 +1,1 @@
+const siteNav = new SiteNav();
