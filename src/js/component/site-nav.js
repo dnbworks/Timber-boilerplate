@@ -1,11 +1,14 @@
+import { invalid } from "../utils/invalid";
+
 
 const { HTMLElement } = window;
 
 
 
-class SiteNav extends HTMLElement {
+export class SiteNav extends HTMLElement {
   constructor() {
     // You can initialize or bind elements here if needed
+				console.log("yeah");
   }
 
   open(control, third) {
