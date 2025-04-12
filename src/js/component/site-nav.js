@@ -8,7 +8,6 @@ const { HTMLElement } = window;
 export class SiteNav extends HTMLElement {
   constructor() {
     // You can initialize or bind elements here if needed
-				console.log("yeah");
   }
 
   open(control, third) {

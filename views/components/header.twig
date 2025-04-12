@@ -1,0 +1,258 @@
+
+		<header>
+			<div class="col-12 col-lg-11 mx-auto container-width px-lg-0">
+				<div class="container-fluid no-gutters">
+					<div class="row justify-content-between align-items-center">
+						<div class="col-2">
+							<a href="{{ site.url }}" class="logo">
+								{% if logo %}
+         <img src="{{ logo | escape }}" alt="{{ site.name }}" width="150px">
+        {% else %}
+         <h1>{{ site.name }}</h1>
+        {% endif %}
+							</a>
+						</div>
+						<div class="col-6">
+							<nav class="gateway-menu">
+							 {% for item in primary_menu.items %}
+									<li class="{{ item.classes | join(' ') }}">
+													<a href="{{ item.link }}">{{ item.title }}</a>
+									</li>
+								{% endfor %}
+							</nav>
+							<div class="menu-bar-wrapper">
+								<div class="d-flex justify-content-end align-items-center">
+									<button class="search-toggle" aria-expanded="false" aria-label="Toggle Site Search" aria-controls="site-search"> <svg class="svg-inline--fa fa-search fa-w-16" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
+											<path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path>
+										</svg><!-- <span class="fas fa-search"></span> -->
+									</button>
+									<span class="menu-bars-toggle reverse">
+										<span class="bar1"></span>
+										<span class="bar2"></span>
+										<span class="bar3"></span>
+									</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<ul class="aux-menu">
+					<li><a href="#" aria-haspopup="true" aria-expanded="false">News &amp; Events<svg class="svg-inline--fa fa-chevron-down fa-w-14" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-down" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg="">
+								<path fill="currentColor" d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path>
+							</svg><!-- <i class="fas fa-chevron-down"></i> --></a>
+						<ul>
+							<li class="aux-h4">
+								<h4>Get the Latest</h4>
+							</li>
+							<li><a href="#">IPLC Stories</a></li>
+							<li><a href="#">For the Media</a></li>
+							<li><a href="#">Events Calendar</a></li>
+							<li><a href="#" target="_blank" rel="noopener">Sports</a></li>
+							<li><a title="" href="#" target="_blank" rel="noopener">Activity Center</a></li>
+						</ul>
+					</li>
+					<li><a href="#" aria-haspopup="true" aria-expanded="false">Give to IPLC<svg class="svg-inline--fa fa-chevron-down fa-w-14" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-down" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg="">
+								<path fill="currentColor" d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path>
+							</svg><!-- <i class="fas fa-chevron-down"></i> --></a>
+						<ul>
+							<li class="aux-h4">
+								<h4>Partner with Us</h4>
+							</li>
+							<li><a href="/donations.html" target="_blank" rel="noopener">Make a Gift Now</a></li>
+							<li><a href="/give">Ways to Give</a></li>
+						</ul>
+					</li>
+					<li><a href="#" aria-haspopup="true" aria-expanded="false">Quick Links<svg class="svg-inline--fa fa-chevron-down fa-w-14" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-down" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg="">
+								<path fill="currentColor" d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path>
+							</svg><!-- <i class="fas fa-chevron-down"></i> --></a>
+						<ul>
+							<li class="aux-h4">
+								<h4>Student Resources</h4>
+							</li>
+							<li><a href="#"></a>
+							</li>
+							<li><a href="#">Email</a>
+							</li>
+							<li><a href="#">Student Portal</a></li>
+							<li><a href="#">Library</a>
+							</li>
+							<li><a href="#">Academic Calendar</a></li>
+							<li class="aux-h4">
+								<h4>Campus Resources</h4>
+							</li>
+							<li><a href="#">Jobs</a></li>
+							<li><a href="#">Campus Map</a></li>
+							<li class="aux-h4">
+								<h4>Campus Location</h4>
+							</li>
+							<li><a href="#">Visit IPLC</a></li>
+							<li><a href="#">Main Campus</a></li>
+							<li class="aux-h4">
+								<h4>Find People</h4>
+							</li>
+							<li><a href="/faculty.html">Faculty Directory</a></li>
+							<li><a href="/staff-directory.html">Staff Directory</a></li>
+							<li><a href="/contact-us.html">Contact Us</a></li>
+						</ul>
+					</li>
+					<li>
+						<button id="search-toggle-nav" class="search-toggle" aria-expanded="false" aria-label="Toggle Site Search" aria-controls="site-search"> <svg class="svg-inline--fa fa-search fa-w-16" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
+								<path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path>
+							</svg><!-- <span class="fas fa-search"></span> -->
+						</button>
+						<div id="site-search" class="search">
+							<form action="">
+								<label style="display: none;" for="wcu_search">Search the IPLC site</label>
+								<input id="wcu_search" class="search-wcu" name="q" type="text">
+								<svg class="svg-inline--fa fa-search fa-w-16" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
+									<path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path>
+								</svg><!-- <i class="fas fa-search"></i> -->
+							</form>
+							<button id="search-close-nav" aria-expanded="false" aria-label="Close Site Search" aria-controls="site-search">
+								<svg class="svg-inline--fa fa-times fa-w-11" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="times" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512" data-fa-i2svg="">
+									<path fill="currentColor" d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"></path>
+								</svg><!-- <i class="fas fa-times"></i> -->
+							</button>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="aux-background">&nbsp;</div>
+			<div class="ham-menu" id="site-ham-menu" aria-expanded="false">
+				<button id="site-ham-close" aria-expanded="true" aria-label="Close Site Menu" aria-controls="site-ham-menu" class=""><i class="fal fa-times"></i></button>
+				<div class="ham-gateways">
+					<ul class="ham-gateway-menu">
+						<li><a href="apply.html">Admissions &amp; Aid</a></li>
+						<li><a href="academics.html">Academics</a></li>
+						<li><a href="alumni.html">Alumni</a></li>
+						<li><a href="about.html">About</a></li>
+					</ul>
+				</div>
+				<h3>Helpful Links</h3>
+				<ul class="ham-menu-list quick-links">
+					<li><button class="sn-toggle" aria-expanded="false" aria-label="menu toggle button">News &amp;
+							Events<svg class="svg-inline--fa fa-angle-left fa-w-16" aria-hidden="true" focusable="false" data-prefix="far" data-icon="angle-left" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
+								<g>
+									<path fill="currentColor" d="M156.5,447.7l-12.6,29.5c-18.7-9.5-35.9-21.2-51.5-34.9l22.7-22.7C127.6,430.5,141.5,440,156.5,447.7z M40.6,272H8.5 c1.4,21.2,5.4,41.7,11.7,61.1L50,321.2C45.1,305.5,41.8,289,40.6,272z M40.6,240c1.4-18.8,5.2-37,11.1-54.1l-29.5-12.6 C14.7,194.3,10,216.7,8.5,240H40.6z M64.3,156.5c7.8-14.9,17.2-28.8,28.1-41.5L69.7,92.3c-13.7,15.6-25.5,32.8-34.9,51.5 L64.3,156.5z M397,419.6c-13.9,12-29.4,22.3-46.1,30.4l11.9,29.8c20.7-9.9,39.8-22.6,56.9-37.6L397,419.6z M115,92.4 c13.9-12,29.4-22.3,46.1-30.4l-11.9-29.8c-20.7,9.9-39.8,22.6-56.8,37.6L115,92.4z M447.7,355.5c-7.8,14.9-17.2,28.8-28.1,41.5 l22.7,22.7c13.7-15.6,25.5-32.9,34.9-51.5L447.7,355.5z M471.4,272c-1.4,18.8-5.2,37-11.1,54.1l29.5,12.6 c7.5-21.1,12.2-43.5,13.6-66.8H471.4z M321.2,462c-15.7,5-32.2,8.2-49.2,9.4v32.1c21.2-1.4,41.7-5.4,61.1-11.7L321.2,462z M240,471.4c-18.8-1.4-37-5.2-54.1-11.1l-12.6,29.5c21.1,7.5,43.5,12.2,66.8,13.6V471.4z M462,190.8c5,15.7,8.2,32.2,9.4,49.2h32.1 c-1.4-21.2-5.4-41.7-11.7-61.1L462,190.8z M92.4,397c-12-13.9-22.3-29.4-30.4-46.1l-29.8,11.9c9.9,20.7,22.6,39.8,37.6,56.9 L92.4,397z M272,40.6c18.8,1.4,36.9,5.2,54.1,11.1l12.6-29.5C317.7,14.7,295.3,10,272,8.5V40.6z M190.8,50 c15.7-5,32.2-8.2,49.2-9.4V8.5c-21.2,1.4-41.7,5.4-61.1,11.7L190.8,50z M442.3,92.3L419.6,115c12,13.9,22.3,29.4,30.5,46.1 l29.8-11.9C470,128.5,457.3,109.4,442.3,92.3z M397,92.4l22.7-22.7c-15.6-13.7-32.8-25.5-51.5-34.9l-12.6,29.5 C370.4,72.1,384.4,81.5,397,92.4z"></path>
+									<circle fill="currentColor" cx="256" cy="364" r="28">
+										<animate attributeType="XML" repeatCount="indefinite" dur="2s" attributeName="r" values="28;14;28;28;14;28;"></animate>
+										<animate attributeType="XML" repeatCount="indefinite" dur="2s" attributeName="opacity" values="1;0;1;1;0;1;"></animate>
+									</circle>
+									<path fill="currentColor" opacity="1" d="M263.7,312h-16c-6.6,0-12-5.4-12-12c0-71,77.4-63.9,77.4-107.8c0-20-17.8-40.2-57.4-40.2c-29.1,0-44.3,9.6-59.2,28.7 c-3.9,5-11.1,6-16.2,2.4l-13.1-9.2c-5.6-3.9-6.9-11.8-2.6-17.2c21.2-27.2,46.4-44.7,91.2-44.7c52.3,0,97.4,29.8,97.4,80.2 c0,67.6-77.4,63.5-77.4,107.8C275.7,306.6,270.3,312,263.7,312z">
+										<animate attributeType="XML" repeatCount="indefinite" dur="2s" attributeName="opacity" values="1;0;0;0;0;1;"></animate>
+									</path>
+									<path fill="currentColor" opacity="0" d="M232.5,134.5l7,168c0.3,6.4,5.6,11.5,12,11.5h9c6.4,0,11.7-5.1,12-11.5l7-168c0.3-6.8-5.2-12.5-12-12.5h-23 C237.7,122,232.2,127.7,232.5,134.5z">
+										<animate attributeType="XML" repeatCount="indefinite" dur="2s" attributeName="opacity" values="0;0;1;1;0;0;"></animate>
+									</path>
+								</g>
+							</svg><!-- <span class="far fa-angle-left"></span> --></button>
+						<ul>
+							<li><a href="news.html" onclick="ga('send', 'event', 'header top nav', 'news and events - latest', 'wcu stories')">News
+									and Stories</a></li>
+							<li><a href="events.html" onclick="ga('send', 'event', 'header top nav', 'news and events - latest', 'engage events')">Events
+									Calendar</a></li>
+							<li><a href="news.html" target="_blank" rel="noopener" onclick="ga('send', 'event', 'header top nav', 'news and events - latest', 'catamount sports')">Catamount
+									Sports</a></li>
+							<li><a title="Liston B. Ramsey Regional Activity Center" href="https://www.wcu.edu/ramsey/" target="_blank" rel="noopener" onclick="ga('send', 'event', 'header top nav', 'news and events - venues', 'ramsey')">Ramsey
+									Activity Center</a></li>
+						</ul>
+					</li>
+					<li><button class="sn-toggle" aria-expanded="false" aria-label="menu toggle button">Give to WCU<svg class="svg-inline--fa fa-angle-left fa-w-16" aria-hidden="true" focusable="false" data-prefix="far" data-icon="angle-left" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
+								<g>
+									<path fill="currentColor" d="M156.5,447.7l-12.6,29.5c-18.7-9.5-35.9-21.2-51.5-34.9l22.7-22.7C127.6,430.5,141.5,440,156.5,447.7z M40.6,272H8.5 c1.4,21.2,5.4,41.7,11.7,61.1L50,321.2C45.1,305.5,41.8,289,40.6,272z M40.6,240c1.4-18.8,5.2-37,11.1-54.1l-29.5-12.6 C14.7,194.3,10,216.7,8.5,240H40.6z M64.3,156.5c7.8-14.9,17.2-28.8,28.1-41.5L69.7,92.3c-13.7,15.6-25.5,32.8-34.9,51.5 L64.3,156.5z M397,419.6c-13.9,12-29.4,22.3-46.1,30.4l11.9,29.8c20.7-9.9,39.8-22.6,56.9-37.6L397,419.6z M115,92.4 c13.9-12,29.4-22.3,46.1-30.4l-11.9-29.8c-20.7,9.9-39.8,22.6-56.8,37.6L115,92.4z M447.7,355.5c-7.8,14.9-17.2,28.8-28.1,41.5 l22.7,22.7c13.7-15.6,25.5-32.9,34.9-51.5L447.7,355.5z M471.4,272c-1.4,18.8-5.2,37-11.1,54.1l29.5,12.6 c7.5-21.1,12.2-43.5,13.6-66.8H471.4z M321.2,462c-15.7,5-32.2,8.2-49.2,9.4v32.1c21.2-1.4,41.7-5.4,61.1-11.7L321.2,462z M240,471.4c-18.8-1.4-37-5.2-54.1-11.1l-12.6,29.5c21.1,7.5,43.5,12.2,66.8,13.6V471.4z M462,190.8c5,15.7,8.2,32.2,9.4,49.2h32.1 c-1.4-21.2-5.4-41.7-11.7-61.1L462,190.8z M92.4,397c-12-13.9-22.3-29.4-30.4-46.1l-29.8,11.9c9.9,20.7,22.6,39.8,37.6,56.9 L92.4,397z M272,40.6c18.8,1.4,36.9,5.2,54.1,11.1l12.6-29.5C317.7,14.7,295.3,10,272,8.5V40.6z M190.8,50 c15.7-5,32.2-8.2,49.2-9.4V8.5c-21.2,1.4-41.7,5.4-61.1,11.7L190.8,50z M442.3,92.3L419.6,115c12,13.9,22.3,29.4,30.5,46.1 l29.8-11.9C470,128.5,457.3,109.4,442.3,92.3z M397,92.4l22.7-22.7c-15.6-13.7-32.8-25.5-51.5-34.9l-12.6,29.5 C370.4,72.1,384.4,81.5,397,92.4z"></path>
+									<circle fill="currentColor" cx="256" cy="364" r="28">
+										<animate attributeType="XML" repeatCount="indefinite" dur="2s" attributeName="r" values="28;14;28;28;14;28;"></animate>
+										<animate attributeType="XML" repeatCount="indefinite" dur="2s" attributeName="opacity" values="1;0;1;1;0;1;"></animate>
+									</circle>
+									<path fill="currentColor" opacity="1" d="M263.7,312h-16c-6.6,0-12-5.4-12-12c0-71,77.4-63.9,77.4-107.8c0-20-17.8-40.2-57.4-40.2c-29.1,0-44.3,9.6-59.2,28.7 c-3.9,5-11.1,6-16.2,2.4l-13.1-9.2c-5.6-3.9-6.9-11.8-2.6-17.2c21.2-27.2,46.4-44.7,91.2-44.7c52.3,0,97.4,29.8,97.4,80.2 c0,67.6-77.4,63.5-77.4,107.8C275.7,306.6,270.3,312,263.7,312z">
+										<animate attributeType="XML" repeatCount="indefinite" dur="2s" attributeName="opacity" values="1;0;0;0;0;1;"></animate>
+									</path>
+									<path fill="currentColor" opacity="0" d="M232.5,134.5l7,168c0.3,6.4,5.6,11.5,12,11.5h9c6.4,0,11.7-5.1,12-11.5l7-168c0.3-6.8-5.2-12.5-12-12.5h-23 C237.7,122,232.2,127.7,232.5,134.5z">
+										<animate attributeType="XML" repeatCount="indefinite" dur="2s" attributeName="opacity" values="0;0;1;1;0;0;"></animate>
+									</path>
+								</g>
+							</svg><!-- <span class="far fa-angle-left"></span> --></button>
+						<ul>
+							<li><a href="https://www.givecampus.com/campaigns/13332/donations/new" target="_blank" rel="noopener" onclick="ga('send', 'event', 'header top nav', 'give - partner', 'make a gift')">Make
+									a Gift Now</a></li>
+							<li><a href="https://www.givecampus.com/schools/WesternCarolinaUniversity/" target="_blank" rel="noopener" onclick="ga('send', 'event', 'header top nav', 'give - partner','current campaigns')">Current
+									Campaigns</a></li>
+							<li><a href="/engage/give-to-wcu/types-of-gifts/index.aspx" onclick="ga('send', 'event', 'header top nav', 'give - partner', 'ways to give')">Ways
+									to Give</a></li>
+						</ul>
+					</li>
+					<li><button class="sn-toggle" aria-expanded="false" aria-label="menu toggle button">Quick Links<svg class="svg-inline--fa fa-angle-left fa-w-16" aria-hidden="true" focusable="false" data-prefix="far" data-icon="angle-left" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
+								<g>
+									<path fill="currentColor" d="M156.5,447.7l-12.6,29.5c-18.7-9.5-35.9-21.2-51.5-34.9l22.7-22.7C127.6,430.5,141.5,440,156.5,447.7z M40.6,272H8.5 c1.4,21.2,5.4,41.7,11.7,61.1L50,321.2C45.1,305.5,41.8,289,40.6,272z M40.6,240c1.4-18.8,5.2-37,11.1-54.1l-29.5-12.6 C14.7,194.3,10,216.7,8.5,240H40.6z M64.3,156.5c7.8-14.9,17.2-28.8,28.1-41.5L69.7,92.3c-13.7,15.6-25.5,32.8-34.9,51.5 L64.3,156.5z M397,419.6c-13.9,12-29.4,22.3-46.1,30.4l11.9,29.8c20.7-9.9,39.8-22.6,56.9-37.6L397,419.6z M115,92.4 c13.9-12,29.4-22.3,46.1-30.4l-11.9-29.8c-20.7,9.9-39.8,22.6-56.8,37.6L115,92.4z M447.7,355.5c-7.8,14.9-17.2,28.8-28.1,41.5 l22.7,22.7c13.7-15.6,25.5-32.9,34.9-51.5L447.7,355.5z M471.4,272c-1.4,18.8-5.2,37-11.1,54.1l29.5,12.6 c7.5-21.1,12.2-43.5,13.6-66.8H471.4z M321.2,462c-15.7,5-32.2,8.2-49.2,9.4v32.1c21.2-1.4,41.7-5.4,61.1-11.7L321.2,462z M240,471.4c-18.8-1.4-37-5.2-54.1-11.1l-12.6,29.5c21.1,7.5,43.5,12.2,66.8,13.6V471.4z M462,190.8c5,15.7,8.2,32.2,9.4,49.2h32.1 c-1.4-21.2-5.4-41.7-11.7-61.1L462,190.8z M92.4,397c-12-13.9-22.3-29.4-30.4-46.1l-29.8,11.9c9.9,20.7,22.6,39.8,37.6,56.9 L92.4,397z M272,40.6c18.8,1.4,36.9,5.2,54.1,11.1l12.6-29.5C317.7,14.7,295.3,10,272,8.5V40.6z M190.8,50 c15.7-5,32.2-8.2,49.2-9.4V8.5c-21.2,1.4-41.7,5.4-61.1,11.7L190.8,50z M442.3,92.3L419.6,115c12,13.9,22.3,29.4,30.5,46.1 l29.8-11.9C470,128.5,457.3,109.4,442.3,92.3z M397,92.4l22.7-22.7c-15.6-13.7-32.8-25.5-51.5-34.9l-12.6,29.5 C370.4,72.1,384.4,81.5,397,92.4z"></path>
+									<circle fill="currentColor" cx="256" cy="364" r="28">
+										<animate attributeType="XML" repeatCount="indefinite" dur="2s" attributeName="r" values="28;14;28;28;14;28;"></animate>
+										<animate attributeType="XML" repeatCount="indefinite" dur="2s" attributeName="opacity" values="1;0;1;1;0;1;"></animate>
+									</circle>
+									<path fill="currentColor" opacity="1" d="M263.7,312h-16c-6.6,0-12-5.4-12-12c0-71,77.4-63.9,77.4-107.8c0-20-17.8-40.2-57.4-40.2c-29.1,0-44.3,9.6-59.2,28.7 c-3.9,5-11.1,6-16.2,2.4l-13.1-9.2c-5.6-3.9-6.9-11.8-2.6-17.2c21.2-27.2,46.4-44.7,91.2-44.7c52.3,0,97.4,29.8,97.4,80.2 c0,67.6-77.4,63.5-77.4,107.8C275.7,306.6,270.3,312,263.7,312z">
+										<animate attributeType="XML" repeatCount="indefinite" dur="2s" attributeName="opacity" values="1;0;0;0;0;1;"></animate>
+									</path>
+									<path fill="currentColor" opacity="0" d="M232.5,134.5l7,168c0.3,6.4,5.6,11.5,12,11.5h9c6.4,0,11.7-5.1,12-11.5l7-168c0.3-6.8-5.2-12.5-12-12.5h-23 C237.7,122,232.2,127.7,232.5,134.5z">
+										<animate attributeType="XML" repeatCount="indefinite" dur="2s" attributeName="opacity" values="0;0;1;1;0;0;"></animate>
+									</path>
+								</g>
+							</svg><!-- <span class="far fa-angle-left"></span> --></button>
+						<ul>
+							<li><a href="/mywcu/index.aspx" onclick="ga('send', 'event', 'header top nav', 'quick links - student', 'mywcu')">myWCU</a>
+							</li>
+							<li><a href="https://canvas.wcu.edu/" onclick="ga('send', 'event', 'header top nav', 'quick links - student', 'canvas')">Canvas</a>
+							</li>
+							<li><a href="https://www.outlook.com/owa/catamountwcu.onmicrosoft.com" onclick="ga('send', 'event', 'header top nav', 'quick links - student', 'email')">Email</a>
+							</li>
+							<li><a href="/hunter-library/index.aspx" onclick="ga('send', 'event', 'header top nav', 'quick links - student', 'library')">Library</a>
+							</li>
+							<li><a href="https://ithelp.wcu.edu/" onclick="ga('send', 'event', 'header top nav', 'quick links - student', 'it help')">IT
+									Help</a></li>
+							<li><a href="/learn/academic-calendar.aspx" onclick="ga('send', 'event', 'header top nav', 'quick links - student', 'academic calendar')">Academic
+									Calendar</a></li>
+							<li><a href="/discover/campus-services-and-operations/student-accounts-office/index.aspx" onclick="ga('send', 'event', 'header top nav', 'quick links - student', 'student accounts')">Students
+									Accounts</a></li>
+							<li><a href="https://www.wcu.edu/coronavirus/index.aspx" onclick="ga('send', 'event', 'header top nav', 'quick links - student', 'covid 19')">COVID-19
+									Updates</a></li>
+							<li><a href="https://info.wcu.edu/selfreport" onclick="ga('send', 'event', 'header top nav', 'quick links - student', 'covid self report')">COVID-19
+									Self-Reporting</a></li>
+							<li><a href="/apply/undergraduate-admissions/visit-wcu/index.aspx" onclick="ga('send', 'event', 'header top nav', 'maps and locations', 'visit wcu')">Visit
+									WCU</a></li>
+							<li><a href="/discover/locations/main-campus/index.aspx" onclick="ga('send', 'event', 'header top nav', 'maps and locations', 'main campus')">Main
+									Campus</a></li>
+							<li><a href="/discover/locations/biltmore-park/index.aspx" onclick="ga('send', 'event', 'header top nav', 'maps and locations', 'biltmore park')">WCU
+									in Asheville</a></li>
+							<li><a href="/discover/locations/main-campus/campus-map.aspx" onclick="ga('send', 'event', 'header top nav', 'maps and locations', 'campus map')">Campus
+									Map</a></li>
+							<li><a href="/faculty/index.aspx" onclick="ga('send', 'event', 'header top nav', 'find people', 'faculty directory')">Faculty
+									Directory</a></li>
+							<li><a href="https://www.wcu.edu/discover/contact-wcu/staff-directory.aspx" onclick="ga('send', 'event', 'header top nav', 'find people', 'staff directory')">Staff
+									Directory</a></li>
+							<li><a href="contact.html" onclick="ga('send', 'event', 'header top nav', 'find people', 'contact us')">Contact
+									Us</a></li>
+						</ul>
+					</li>
+				</ul>
+				<div class="social">
+					<h3>Connect With Us</h3>
+					<ul>
+						<li><a href="tel:8282277211"><svg class="svg-inline--fa fa-phone fa-w-16" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="phone" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
+									<path fill="currentColor" d="M493.4 24.6l-104-24c-11.3-2.6-22.9 3.3-27.5 13.9l-48 112c-4.2 9.8-1.4 21.3 6.9 28l60.6 49.6c-36 76.7-98.9 140.5-177.2 177.2l-49.6-60.6c-6.8-8.3-18.2-11.1-28-6.9l-112 48C3.9 366.5-2 378.1.6 389.4l24 104C27.1 504.2 36.7 512 48 512c256.1 0 464-207.5 464-464 0-11.2-7.7-20.9-18.6-23.4z"></path>
+								</svg><!-- <span class="fas fa-phone"></span> -->828.227.7211</a></li>
+						<li><a href="https://www.facebook.com/iplcollege/" target="_blank"><svg class="svg-inline--fa fa-facebook-f fa-w-10" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="facebook-f" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-fa-i2svg="">
+									<path fill="currentColor" d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"></path>
+								</svg><!-- <span class="fab fa-facebook-f"></span> -->IPLC Facebook</a></li>
+						<li><a href="https://twitter.com/iplcollege" target="_blank"><svg class="svg-inline--fa fa-twitter fa-w-16" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="twitter" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
+									<path fill="currentColor" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path>
+								</svg><!-- <span class="fab fa-twitter"></span> -->IPLC
+								Twitter</a></li>
+						<li><a href="https://www.instagram.com/iplcollege/" target="_blank"><svg class="svg-inline--fa fa-instagram fa-w-14" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="instagram" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg="">
+									<path fill="currentColor" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path>
+								</svg><!-- <span class="fab fa-instagram"></span> -->IPLC Instagram</a></li>
+						<li><a href="https://www.youtube.com/user/iplcollege" target="_blank"><svg class="svg-inline--fa fa-youtube fa-w-18" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="youtube" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg="">
+									<path fill="currentColor" d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"></path>
+								</svg><!-- <span class="fab fa-youtube"></span> -->IPLC YouTube</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="dark-background-overlay"></div>
+		</header>

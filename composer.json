@@ -10,5 +10,10 @@
       "name": "Lukas Gaechter",
       "email": "lukas.gaechter@mind.ch"
     }
-  ]
+  ],
+  "autoload": {
+    "psr-4": {
+      "App\\": "./inc"
+    }
+  }
 }
