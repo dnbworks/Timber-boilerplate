@@ -17,6 +17,7 @@ class Init {
 	public static function get_services() : array {
 		return array(
 			Setup\PostTypes\Program::class,
+			Setup\PostTypes\Event::class,
 			Setup\Enqueue::class,
 		);
 	}

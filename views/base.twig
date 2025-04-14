@@ -1,5 +1,3 @@
-
-
 {{- include( 'header.twig' ) -}}
 
 <main
@@ -8,20 +6,8 @@
 	{{ post.modules ? post.modules | map( module => "data-module-#{ module }" ) | join( ' ' ) : '' }}
 >
 
-
-
 	{% block content %}
-		<div class="mt-100px mx-20px mb-20px mt-md-200vh ms-md-100px relative w-md-100">
 
-			<div class="mx-md-200vw mb-md-200vh mw-md-1200vw">
-                <div>Title Placeholder </div>
-				<div class="Wysiwyg mt-20px">{{- post.content -}}</div>
-			</div>
-
-			<div>Footer Placeholder </div>
-			
-		
-		</div>
 	{% endblock %}
 
 
