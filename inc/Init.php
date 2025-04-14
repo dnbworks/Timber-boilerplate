@@ -17,7 +17,7 @@ class Init {
 	public static function get_services() : array {
 		return array(
 			Setup\PostTypes\Program::class,
-			// Plugins\Acf::class,
+			Setup\Enqueue::class,
 		);
 	}
 

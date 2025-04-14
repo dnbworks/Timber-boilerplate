@@ -2,7 +2,8 @@
 
 namespace App\Setup;
 
-use Timber\{ Timber };
+use App\Helpers;
+use Timber\{Helper, Timber };
 
 /**
  * Enqueue
@@ -16,9 +17,9 @@ class Enqueue {
 	 */
 	public function run() : void {
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_style' ) );
-		add_action( 'wp_enqueue_scripts', array( $this, 'dequeue_styles' ) );
-		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
-		add_action( 'wp_head', array( $this, 'preload' ) );
+		// add_action( 'wp_enqueue_scripts', array( $this, 'dequeue_styles' ) );
+		// add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
+		// add_action( 'wp_head', array( $this, 'preload' ) );
 	}
 
 	/**
@@ -33,13 +34,13 @@ class Enqueue {
 
 		wp_deregister_script( 'jquery' );
 
-		wp_enqueue_script( // phpcs:ignore
-			get_theme_text_domain() . '-vendors',
-			get_template_directory_uri() . '/' . get_theme_manifest()['vendors.js'],
-			array(),
-			null,
-			true
-		);
+		// wp_enqueue_script( // phpcs:ignore
+		// 	get_theme_text_domain() . '-vendors',
+		// 	get_template_directory_uri() . '/' . get_theme_manifest()['vendors.js'],
+		// 	array(),
+		// 	null,
+		// 	true
+		// );
 
 		wp_register_script( // phpcs:ignore
 			get_theme_text_domain() . '-main',
@@ -60,7 +61,6 @@ class Enqueue {
 					'api_url'                => home_url( 'wp-json' ),
 					'current_url'            => get_permalink(),
 					'nonce'                  => wp_create_nonce( 'security' ),
-					'popupContent'           => Timber::compile( 'partials/popupcontent.html.twig', Timber::get_context() ),
 					'coordinates'            => array(
 						'latitude'  => get_option( 'latitude' ),
 						'longitude' => get_option( 'longitude' ),
@@ -96,21 +96,22 @@ class Enqueue {
 	public function enqueue_style() : void {
 
 		// Add custom fonts, used in the main stylesheet.
-		$webfonts = array();
-		foreach ( get_webfonts() as $name => $url ) {
-			wp_register_style( 'font-' . $name, $url, array(), '1.0.0' );
-			$webfonts[] = "font-$name";
-		}
+		// $webfonts = array();
+		// foreach ( get_webfonts() as $name => $url ) {
+		// 	wp_register_style( 'font-' . $name, $url, array(), '1.0.0' );
+		// 	$webfonts[] = "font-$name";
+		// }
 
 		// Theme stylesheet.
 		wp_register_style( // phpcs:ignore
-			get_theme_name() . '-main',
-			get_template_directory_uri() . '/' . get_theme_manifest()['main.css'],
-			$webfonts,
-			false
+			wp_get_theme()->get( 'Name' ) . '-main',
+			get_template_directory_uri() . '/dist/' . Helpers::get_theme_manifest()['main.css'],
+			// $webfonts,
+			false,
+			null
 		);
 
-		wp_enqueue_style( get_theme_name() . '-main' );
+		wp_enqueue_style( wp_get_theme()->get( 'Name' ) . '-main' );
 	}
 
 
