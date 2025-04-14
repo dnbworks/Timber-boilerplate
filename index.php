@@ -13,4 +13,4 @@ $context['primary_menu'] = Timber::get_menu('primary');
 
 
 
-Timber::render( 'index.twig', $context );
+Timber::render( 'single.twig', $context );

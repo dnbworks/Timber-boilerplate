@@ -1,5 +1,6 @@
 const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CleanWebpackPlugin = require("clean-webpack-plugin");
 
  module.exports = {
    mode: "development",
@@ -7,11 +8,12 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 				main: "./src/index.js"
 		},
    output: {
-		 filename: '[name].[contenthash].js',
+		 filename: 'js/[name].[contenthash].js',
      path: path.resolve(__dirname, "dist")
    },
    plugins: [
-    new MiniCssExtractPlugin({ filename: "[name].[contenthash].css" })
+    new MiniCssExtractPlugin({ filename: "css/[name].[contenthash].css" }),
+    new CleanWebpackPlugin()
   ],
   module: {
     rules: [

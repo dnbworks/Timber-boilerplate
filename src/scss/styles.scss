@@ -1,10 +1,15 @@
 $primary: teal;
 $danger: purple;
-
-
+$success: rgb(30, 34, 136);
 
 body {
   font-family: sans-serif;
   background: $primary;
   color: white;
+}
+
+body {
+  h1 {
+    color: $success;
+  }
 }

@@ -1,0 +1,19 @@
+
+{% extends 'base.twig' %}
+
+{% block content %}
+
+	<div>
+		<div>
+			{% block track %}
+				<div>some other content of track from sub base</div>
+			{% endblock %}
+
+			{% block footer %}
+				hello footer
+			{% endblock %}
+
+		</div>
+	</div>
+
+{% endblock  %}

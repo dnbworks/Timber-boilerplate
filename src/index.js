@@ -1,3 +1,3 @@
 import { run } from "./js/app";
-import "./styles.scss";
+import "./scss/styles.scss";
 run();

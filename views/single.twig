@@ -1,18 +1,13 @@
-<article>
 
-    <header>
-        <h1>{{ post.title }}</h1>
+{% extends 'sub-base.twig' %}
 
-        <p>
-            Posted by {{ post.author.name }} <span>&bull;</span>
-            <time
-                datetime="{{ post.date('Y-m-d H:i:s') }}"
-            >{{ post.date }}</time>
-        <p>
-    </header>
+{% block content %}
+	{{ parent() }}
 
-    <section>
-        {{ post.content }}
-    </section>
+{% endblock %}
 
-</article>
+{% block track %}
+
+	<div>Content from Track </div>
+
+{% endblock  %}

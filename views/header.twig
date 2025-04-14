@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html
+	itemscope
+	itemtype="http://schema.org/WebPage"
+	{{ site.language_attributes }}
+>
+
+	<head>
+
+		<meta charset="{{ site.charset }}">
+		<link rel="profile" href="http://gmpg.org/xfn/11">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=5">
+
+		<meta name="description" content="{{ site.description }}" />
+
+		{{- function( 'wp_head' ) -}}
+
+    </head>
+
+    <body class="{{ body_class }} bg-body text-body relative font-normal ff-body {{ post.body_classes ? ( ' ' ~ post.body_classes | join( ' ' ) ) }}">
+
