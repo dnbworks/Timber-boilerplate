@@ -6,7 +6,7 @@ class Event {
 
 	public function run() {
 		add_action( 'init', array( $this, 'register' ), 10, 0 );
-
+		add_action( 'init', [ $this, 'taxonomy' ], 10 );
 	}
 
 	public static function register() {
@@ -42,5 +42,33 @@ class Event {
 		];
 
 		register_post_type( 'event', $args );
+	}
+
+	public function taxonomy() {
+		$labels = [
+			'name'              => __( 'Event Categories', 'your-textdomain' ),
+			'singular_name'     => __( 'Event Category', 'your-textdomain' ),
+			'search_items'      => __( 'Search Event Categories', 'your-textdomain' ),
+			'all_items'         => __( 'All Event Categories', 'your-textdomain' ),
+			'parent_item'       => __( 'Parent Category', 'your-textdomain' ),
+			'parent_item_colon' => __( 'Parent Category:', 'your-textdomain' ),
+			'edit_item'         => __( 'Edit Event Category', 'your-textdomain' ),
+			'update_item'       => __( 'Update Event Category', 'your-textdomain' ),
+			'add_new_item'      => __( 'Add New Event Category', 'your-textdomain' ),
+			'new_item_name'     => __( 'New Event Category Name', 'your-textdomain' ),
+			'menu_name'         => __( 'Event Categories', 'your-textdomain' ),
+		];
+
+		$args = [
+			'hierarchical'      => true,
+			'labels'            => $labels,
+			'show_ui'           => true,
+			'show_admin_column' => true,
+			'query_var'         => true,
+			'show_in_rest'      => true,
+			'rewrite'           => [ 'slug' => 'event-category' ],
+		];
+
+		register_taxonomy( 'event_category', [ 'event' ], $args );
 	}
 }

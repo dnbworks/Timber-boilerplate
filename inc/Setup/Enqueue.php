@@ -10,30 +10,24 @@ class Enqueue {
 
 	public function run() : void {
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_style' ) );
-		// add_action( 'wp_enqueue_scripts', array( $this, 'dequeue_styles' ) );
+		add_action( 'wp_enqueue_scripts', array( $this, 'dequeue_styles' ) );
 		// add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
 		// add_action( 'wp_head', array( $this, 'preload' ) );
 	}
 
-	/**
-	 * Enqueue scripts
-	 *
-	 * @access public
-	 * @return void
-	 * @since  1.0.0
-	 */
+
 	public function enqueue_scripts() : void {
 		wp_deregister_script( 'wp-embed' );
 
 		wp_deregister_script( 'jquery' );
 
-		// wp_enqueue_script( // phpcs:ignore
-		// 	get_theme_text_domain() . '-vendors',
-		// 	get_template_directory_uri() . '/' . get_theme_manifest()['vendors.js'],
-		// 	array(),
-		// 	null,
-		// 	true
-		// );
+		wp_enqueue_script( // phpcs:ignore
+			get_theme_text_domain() . '-vendors',
+			get_template_directory_uri() . '/' . get_theme_manifest()['vendors.js'],
+			array(),
+			null,
+			true
+		);
 
 		wp_register_script( // phpcs:ignore
 			get_theme_text_domain() . '-main',

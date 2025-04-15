@@ -3,3 +3,4 @@ node_modules
 dist
 composer.lock
 /vendor/
+todo.md
