@@ -40,6 +40,17 @@ const ManifestPlugin = require('webpack-manifest-plugin');
           "sass-loader" //1. Turns sass into css
         ]
       },
+      {
+        test: /\.(gif|png|jpe?g)$/i,
+        use: [{
+          loader: 'file-loader',
+          options: {
+            outputPath: 'img/',
+            name: '[ext]/[name].[ext]',
+            // publicPath: '../img/',
+          },
+        }]
+      }
     ]
   }
  };
